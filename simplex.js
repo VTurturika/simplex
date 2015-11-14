@@ -1,118 +1,117 @@
-function Simplex(){ //todo у конструктор передавать функцію мети
+function Simplex() { //todo у конструктор передавать функцію мети
 
-    var a = [],          /* array of conditions coefficients */
-        f = [],          /* array of target function coefficients */
-        M = 1000000;     /* "very big number" for method of artificial basis */
+    var A = [], /* array of conditions coefficients */
+        f = [], /* array of target function coefficients */
+        M = 1000000;
+    /* "very big number" for method of artificial basis */
+    //todo varchar, fchar
 
-    /* set methods */
-    this.setCondition = function (sign, b, q) {
+    /**
+     *
+     * @param input
+     */
 
-       if( typeof sign == "string" &&  sign.length >= 1) { /* check if "sign" is a string and "sign" is a valid string*/
+    this.set = function (input) {
 
-           /* check version of method
-           * if the following condition equal true, than use version with string parsing
-           * else use version with coefficients
-           * */
-           if( sign.length > 2 ) {
-                //todo дописать метод із розбором рядка
-           }
+        var i;
 
-           else {
+        if (input.f && input.mode) { //target function
 
-               a.push([]);
-               var n = a.length - 1;
+            f.length = 0;
+            f.mode = /(min)|(max)/.exec(input.mode.toLowerCase());
 
-               var currentSign = /^((>|<)?=)$/.exec(sign); /* check sign */
-               if( currentSign ) {
+            //todo parsing input.f / input.mode
+            for (i = 0; i < input.f.length; i++) {
 
-                   switch( currentSign[1] ) {
-                       case "<=": a[n].sign = -1; break;
-                       case "=" : a[n].sign =  0; break;
-                       case ">=": a[n].sign =  1; break;
-                   }
-               }
+                f[i] = input.f[i];
+            }
 
-               else {
-                   throw new Error("Wrong first parameter in setCondition method");
-               }
+            f.mode = input.mode;
+        }
+        else if (input.func) {
+            //todo parsing input.func;
+        }
 
-               if( isNaN( a[n].b = parseFloat(b) ) ) {
-                   a.pop();
-                   throw new TypeError("Wrong second parameter in setCondition method");
-               }
+        if (input.modify) {
 
-               /* check version of method
-               *  if the following condition equal true, then use version with array of coefficients
-               *  else use version with coefficients as parameters
-               * */
-               var i;
-               if( Array.isArray( q ) ) {
+            //todo support to modify data
+        }
 
-                   for(i = 0; i< q.length; i++) {
+        if (input.c) {
 
-                       if (isNaN(a[n][i] = parseFloat(q[i])) ) {
-                           a.pop();
-                           throw new TypeError("Wrong element of array with " + i + " number");
-                       }
-                   }
-               }
-               else {
+            if (input.c.sign && input.c.a && input.c.b) {
 
-                   for(i = 2; i< arguments.length; i++) {
 
-                       if (isNaN(a[n][i-2] = parseFloat(arguments[i])) ) {
-                           a.pop();
-                           throw new TypeError("Wrong " + (i+1) + "th parameter in setCondition method");
-                       }
-                   }
-               }
-           }
-       }
-       else {
-           throw new TypeError("Wrong first parameter in setCondition method");
-       }
+                parseCondition((input.c.row == 0 ? 0 : ( input.c.row || A.length ) ),
+                    input.c.sign, input.c.a, input.c.b);
+
+            }
+            else if (input.c.str) {
+                //todo parsing input.c.srt;
+            }
+        }
+
+        if (input.conditions) {
+
+            var condCount = 0;//input.conditions.start || 0;
+
+            while (input.conditions["c" + condCount]) {
+
+                var condition = input.conditions["c" + condCount];
+
+                if (condition.sign && condition.a && condition.b) {
+                    parseCondition(condCount, condition.sign, condition.a, condition.b);
+                }
+                else if (condition.str) {
+
+                }
+                condCount++;
+            }
+        }
     };
 
-    this.setF = function(mode, coefficients){
+    function checkSign(s) {
 
-        var currentMode, i;
-        /* check if "mode" is a string and "mode"equal only min or only max */
-        if( typeof mode == "string" && (currentMode = /(min)|(max)/.exec(mode.toLowerCase())) ) {
+        var currentSign = /^((>|<)?=)$/.exec(s);
+        if (currentSign) {
 
-            f.mode = currentMode[0];
-            /*
-             * check version of method
-             * if following condition equal true, than use version with array of coefficients
-             * else use version with coefficients as parameters
-             * */
-            if( Array.isArray( coefficients ) ) {
-
-                for(i = 0; i< coefficients.length; i++) {
-
-                    if (isNaN(f[i] = parseFloat(coefficients[i])) ) {
-                        f.length = 0;
-                        delete f.mode;
-                        throw new TypeError("Wrong element of array with " + i + " number");
-                    }
-                }
+            switch (currentSign[1]) {
+                case "<=":
+                    return -1;
+                case "=" :
+                    return 0;
+                case ">=":
+                    return 1;
             }
-            else {
+        }
 
-                for(i = 1; i< arguments.length; i++) {
+        else {
+            throw new Error("error");
+        }
 
-                    if (isNaN(f[i-1] = parseFloat(arguments[i])) ) {
-                        f.length = 0;
-                        delete f.mode;
-                        throw new TypeError("Wrong " + (i+1) + "th parameter in setF method");
-                    }
-                }
-            }
+    }
 
+    function parseCondition(row, s, a, b) {
+
+        var currentSign = checkSign(s);
+
+        if (!A[row]) {
+            A.splice(row, 0, []);
         }
         else {
-            throw new TypeError("Wrong first parameter in ");
+            A[row].length = 0;
         }
-    };
 
-    this.getA = function() {return a; }; //todo must be changed later
+        A[row].sign = currentSign;
+        A[row].b = b;
+
+        for (var i = 0; i < a.length; i++) {
+
+            A[row][i] = a[i];
+        }
+    }
+
+    this.getA = function () {
+        return A;
+    }; //todo must be changed later
 }
