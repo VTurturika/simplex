@@ -6,11 +6,6 @@ function Simplex() { //todo у конструктор передавать фу�
     /* "very big number" for method of artificial basis */
     //todo varchar, fchar
 
-    /**
-     *
-     * @param input
-     */
-
     this.set = function (input) {
 
         var i;
@@ -74,21 +69,22 @@ function Simplex() { //todo у конструктор передавать фу�
 
         var currentSign = /^((>|<)?=)$/.exec(s);
         if (currentSign) {
-
-            switch (currentSign[1]) {
-                case "<=":
-                    return -1;
-                case "=" :
-                    return 0;
-                case ">=":
-                    return 1;
-            }
+            return currentSign[0];
         }
 
         else {
             throw new Error("error");
         }
 
+    }
+
+    function reverseSign(s) {
+
+        switch (s) {
+            case "<=": return ">=";
+            case  "=": return  "=";
+            case ">=": return "<=";
+        }
     }
 
     function parseCondition(row, s, a, b) {
@@ -111,7 +107,59 @@ function Simplex() { //todo у конструктор передавать фу�
         }
     }
 
+    function normalize() {
+
+        // get max number of variables from each condition
+        var n = A.reduce(function(max,current){
+            return max.length > current.length ? max.length : current.length;
+        });
+
+        var m = A.length,
+            extendVars = new Array(m),
+            extendCount = 0, i;
+
+        for(i=0; i<m; i++) {
+
+           if(A[i].b < 0) {
+               A[i].forEach(function(item, j, arr){arr[j] *= -1;});
+               A[i].b *= -1;
+               A[i].sign = reverseSign(A[i].sign);
+           }
+
+           if( A[i].sign == "<=" ) {
+               extendVars[i] = 1;
+               A[i].sign = "=";
+               extendCount++;
+           }
+           else if( A[i].sign == ">="  ) {
+               extendVars[i] = -1;
+               A[i].sign = "=";
+               extendCount++;
+           }
+        }
+        var temp = {}; temp.mode = f.mode;
+        f = f.concat(Array.apply(null, Array(n + extendCount - f.length)).map(Number.prototype.valueOf,0));
+        f.mode = temp.mode;
+
+        var offsetExtendVar = 0;
+        for(i=0;i<m;i++){
+
+            temp.sign = A[i].sign; temp.b = A[i].b;
+            A[i] = A[i].concat(Array.apply(null, Array(n + extendCount - A[i].length)).map(Number.prototype.valueOf,0));
+            A[i].sign = temp.sign; A[i].b = temp.b;
+
+            if( extendVars[i] ) {
+                A[i][n + offsetExtendVar++] = extendVars[i];
+            }
+        }
+    }
+
     this.getA = function () {
+        normalize();
         return A;
     }; //todo must be changed later
+
+    this.getF = function() {
+        return f;
+    }
 }

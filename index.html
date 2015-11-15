@@ -8,23 +8,27 @@
 
         s = new Simplex();
 
-        s.set({conditions: {
+        s.set({
+            f: [1,2],
+            mode: "max",
+            conditions: {
 
             c0 : {
                 sign: ">=",
-                a : [1,2,3],
-                b : 2
+                a : [1,2,5],
+                b : 1
             },
 
             c1 : {
                 sign: "<=",
-                a : [4,5,6],
-                b: 7
+                a : [4,5],
+                b: 1
             }
         }});
 
 
         console.log(s.getA());
+        console.log(s.getF());
 
     </script>
 </head>
