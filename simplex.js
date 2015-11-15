@@ -1,8 +1,11 @@
-function Simplex() { //todo у конструктор передавать функцію мети
+function Simplex() {
 
-    var A = [], /* array of conditions coefficients */
-        f = [], /* array of target function coefficients */
-        M = 1000000; // "very big number" for method of artificial basis
+    var A = [],      /* array of conditions coefficients */
+        f = [],      /* array of target function coefficients */
+        M = 1000000, // "very big number" for method of artificial basis
+        realNumVariables,
+        isResult,
+        answer={};
     //todo varchar, fchar
 
     this.set = function (input) {
@@ -113,6 +116,8 @@ function Simplex() { //todo у конструктор передавать фу�
             return max.length > current.length ? max.length : current.length;
         });
 
+        realNumVariables = n;
+
         var m = A.length,
             extendVars = new Array(m),
             extendCount = 0, i;
@@ -196,13 +201,114 @@ function Simplex() { //todo у конструктор передавать фу�
         return basis;
     }
 
-    this.getA = function () {
-        normalize();
-        console.log(firstBasis());
-        return A;
-    }; //todo must be changed later
+    function calc() {
 
-    this.getF = function() {
-        return f;
+        normalize();
+        var basis = firstBasis(),
+            n = f.length,
+            m = A.length,
+            delta = [],
+            theta = [],
+            i, j, si, sj,
+            solver, result = 0;
+
+        while ( true ) {
+
+            delta = f.slice(0);
+            delta.forEach(function(item, i, arr){
+                arr[i] *= -1;
+            });
+
+            for(i=0; i<m; i++) {
+                for(j=-1;j<n; j++) {
+
+                    if( j < 0)
+                        result += A[i].b * f[ basis[i] ];
+                    else
+                        delta[j] += A[i][j] *f[ basis[i] ];
+                }
+            }
+
+            solver = (f.mode == "max") ? Math.min.apply(null, delta)
+                                       : Math.max.apply(null, delta);
+
+            if     (f.mode == "max" && solver >= 0 ) break;
+            else if(f.mode == "min" && solver <= 0 ) break;
+
+            sj = delta.indexOf(solver);
+
+            theta.forEach(function(item,i,arr){arr[i] = Infinity;});
+            for(i=0; i<m; i++) {
+                if(A[i][sj] > 0) {
+                    theta[i] = A[i].b / A[i][sj];
+                }
+            }
+
+            si = theta.indexOf(Math.min.apply(null, theta));
+
+            solver = A[si][sj];
+            var prev = copyA();
+
+            for(i = 0; i<m; i++) {
+                for(j=-1; j<n; j++) {
+
+                    if( j < 0 )
+                        A[i].b = nextPlan("b", prev, solver, i, j, si, sj);
+                    else
+                        A[i][j] = nextPlan("a", prev, solver, i, j, si, sj);
+                }
+            }
+
+            basis[si] = sj;
+            result = 0;
+            theta.length = 0;
+        }
+        var X= new Array(realNumVariables);
+        for(i = 0; i< realNumVariables; i++) {
+
+            if( (pos=basis.indexOf(i)) != -1)
+                X[i]=A[pos].b;
+            else
+                X[i] = 0;
+        }
+        isResult = true;
+        answer = {result:result, x:X};
     }
+
+    function copyA() {
+        var result = [];
+        for(var i = 0; i< A.length; i++) {
+            result[i] = A[i].slice(0);
+            result[i].b = A[i].b;
+            result[i].sign = A[i].sign;
+        }
+        return result;
+    }
+
+    function nextPlan(mode, a, solver, i, j, si, sj) {
+
+        if( mode == "a" ) {
+
+            if(i == si)
+                return a[i][j] / solver;
+            else if( i != si && j == sj )
+                return 0;
+            else
+                return (solver*a[i][j] - a[si][j]*a[i][sj]) / solver;
+        }
+        else if (mode  == "b") {
+
+            if( i == si )
+                return a[i].b / solver;
+            else
+                return (solver*a[i].b - a[si].b*a[i][sj]) / solver;
+        }
+    }
+
+    this.get = function () {
+
+        if(!isResult) calc();
+        return answer;
+    };
+
 }

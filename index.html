@@ -9,26 +9,32 @@
         s = new Simplex();
 
         s.set({
-            f: [1,2],
+            f: [8,10,0,-5],
             mode: "max",
             conditions: {
 
             c0 : {
-                sign: "=",
-                a : [5,1],
-                b : -1
+                sign: "<=",
+                a : [2,3,4,2],
+                b : 450
             },
 
             c1 : {
-                sign: "=",
-                a : [4,2],
-                b: 1
+                sign: "<=",
+                a : [3,2,1,2],
+                b: 380
+            },
+
+            c2 : {
+                sign: ">=",
+                a: [0,0,1,0],
+                b: 9
             }
         }});
 
 
-        console.log(s.getA());
-        console.log(s.getF());
+        console.log(s.get());
+
 
     </script>
 </head>
