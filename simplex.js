@@ -2,8 +2,7 @@ function Simplex() { //todo у конструктор передавать фу�
 
     var A = [], /* array of conditions coefficients */
         f = [], /* array of target function coefficients */
-        M = 1000000;
-    /* "very big number" for method of artificial basis */
+        M = 1000000; // "very big number" for method of artificial basis
     //todo varchar, fchar
 
     this.set = function (input) {
@@ -109,7 +108,7 @@ function Simplex() { //todo у конструктор передавать фу�
 
     function normalize() {
 
-        // get max number of variables from each condition
+        // getting max number of variables from each condition
         var n = A.reduce(function(max,current){
             return max.length > current.length ? max.length : current.length;
         });
@@ -120,12 +119,12 @@ function Simplex() { //todo у конструктор передавать фу�
 
         for(i=0; i<m; i++) {
 
-           if(A[i].b < 0) {
+           if(A[i].b < 0) {  //normalizing "free" member;
                A[i].forEach(function(item, j, arr){arr[j] *= -1;});
                A[i].b *= -1;
                A[i].sign = reverseSign(A[i].sign);
            }
-
+           //changing inequalities to equalities
            if( A[i].sign == "<=" ) {
                extendVars[i] = 1;
                A[i].sign = "=";
@@ -137,10 +136,13 @@ function Simplex() { //todo у конструктор передавать фу�
                extendCount++;
            }
         }
+        // filling additional variables into target function
         var temp = {}; temp.mode = f.mode;
         f = f.concat(Array.apply(null, Array(n + extendCount - f.length)).map(Number.prototype.valueOf,0));
         f.mode = temp.mode;
 
+        // filling additional zeros to each condition (equality of lengths of each condition)
+        // filling additional variables into each condition
         var offsetExtendVar = 0;
         for(i=0;i<m;i++){
 
@@ -154,8 +156,49 @@ function Simplex() { //todo у конструктор передавать фу�
         }
     }
 
+    function firstBasis() {
+
+        var m = A.length, n = f.length,
+            basis = new Array( A.length),
+            pos, i, hasBasisVar=false;
+        for(i = 0; i<m; i++) {
+
+            pos=0;
+            // finding basis variable
+            while( (pos=A[i].indexOf(1,pos)) != -1 ) {
+
+                hasBasisVar = false;
+                //checking variable to basis
+                hasBasisVar = A.every(function(item, row, arr){
+
+                    if( row == i ) return true;
+                    else if(arr[row][pos] == 0 ) return true;
+                    else return false;
+                });
+
+                if( hasBasisVar ) break;
+                pos++;
+            }
+
+            if( hasBasisVar ) {
+                basis[i]=pos;
+            }
+            else { //adding fake variable to basis
+                n++;
+                f.push( (f.mode == "max") ? -M : M );
+                A.forEach(function(item,row,arr){
+                    arr[row][n-1] = (row == i ) ? 1 : 0;
+                });
+                basis[i]=n-1;
+            }
+        }
+
+        return basis;
+    }
+
     this.getA = function () {
         normalize();
+        console.log(firstBasis());
         return A;
     }; //todo must be changed later
 
