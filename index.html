@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>simplex test</title>
+    <script src="./fraction.js"></script>
     <script src="./simplex.js"></script>
     <script>
 
@@ -11,6 +12,7 @@
         s.set({
             f: [8,10,0,-5],
             mode: "max",
+            fraction : true,
             conditions: {
 
             c0 : {
@@ -26,15 +28,13 @@
             },
 
             c2 : {
-                sign: ">=",
-                a: [0,0,1,0],
-                b: 9
+                sign : ">=",
+                a : [0,0,1,0],
+                b : 9
             }
         }});
 
-
         console.log(s.get());
-
 
     </script>
 </head>

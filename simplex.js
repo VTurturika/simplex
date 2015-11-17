@@ -5,6 +5,7 @@ function Simplex() {
         M = 1000000, // "very big number" for method of artificial basis
         realNumVariables,
         isResult,
+        isFractinMode,
         answer={};
     //todo varchar, fchar
 
@@ -15,6 +16,7 @@ function Simplex() {
      * @param.option {String} input.mode - mode of problem (max/min)
      * @param.option {String} input.func - target function as string
      *                !!! use only func or only f + mode params
+     * @param.option {Boolean} input.fraction - if equal true then calc answer as fraction
      *
      * @param.option {Object} input.c - setting SINGLE condition
      *  @param.option {String} input.c.sign - current condition sign (<= | = | >=)
@@ -33,6 +35,8 @@ function Simplex() {
     this.set = function (input) {
 
         var i;
+
+        isFractinMode = input.fraction || false;
 
         if (input.f && input.mode) { //target function
 
@@ -298,7 +302,86 @@ function Simplex() {
     }
 
     function calcAsFraction() {
+        normalize();
+        var basis = firstBasis(),
+            n = f.length,
+            m = A.length,
+            delta = [],
+            theta = [],
+            i, j, si, sj,
+            solver, result = 0;
 
+        while(true) {
+            delta = f.slice(0);
+            delta.forEach(function(item, i, arr){
+                arr[i] *= -1;
+            });
+
+            for(i=0; i<m; i++) {
+                for(j=-1;j<n; j++) {
+
+                    if( j < 0)
+                        result = Fraction(result).add(Fraction(A[i].b).mul(Fraction(f[ basis[i] ])));
+                    else
+                        delta[j] = Fraction(delta[j]).add(Fraction(A[i][j]).mul(f[ basis[i] ]));
+                }
+            }
+
+            solver = (f.mode == "max") ? Math.min.apply(null, delta)
+                                       : Math.max.apply(null, delta);
+
+
+            if     (f.mode == "max" && solver >= 0 ) break;
+            else if(f.mode == "min" && solver <= 0 ) break;
+
+            sj=indexOfFraction(delta,solver);
+
+            theta.forEach(function(item,i,arr){arr[i] = Infinity;});
+            for(i=0; i<m; i++) {
+                if(A[i][sj] > 0) {
+                    theta[i] = Fraction(A[i].b).div(Fraction(A[i][sj]));
+                }
+            }
+
+            si = indexOfFraction(theta,Math.min.apply(null, theta));
+
+            solver = new Fraction(A[si][sj]);
+            var prev = copyA();
+
+            for(i = 0; i<m; i++) {
+                for(j=-1; j<n; j++) {
+
+                    if( j < 0 )
+                        A[i].b = nextPlanAsFraction("b", prev, solver, i, j, si, sj);
+                    else
+                        A[i][j] = nextPlanAsFraction("a", prev, solver, i, j, si, sj);
+                }
+            }
+
+            basis[si] = sj;
+            result = 0;
+            theta.length = 0;
+        }
+
+        var X = new Array(realNumVariables);
+        for(i = 0; i< realNumVariables; i++) {
+
+            if( (pos=basis.indexOf(i)) != -1)
+                X[i]=A[pos].b;
+            else
+                X[i] = 0;
+        }
+        isResult = true;
+        answer = {result:result, x:X};
+    }
+
+    function indexOfFraction(arr, item) {
+        for(var i = 0; i<arr.length; i++) {
+            if(Fraction(item).compare(Fraction(arr[i])) == 0) {
+                return i
+            }
+        }
+        return -1;
     }
 
     function copyA() {
@@ -331,6 +414,26 @@ function Simplex() {
         }
     }
 
+    function nextPlanAsFraction(mode, a, solver, i, j, si, sj){
+
+        if( mode == "a" ) {
+
+            if(i == si)
+                return Fraction(a[i][j]).div(Fraction(solver));
+            else if( i != si && j == sj )
+                return Fraction(0);
+            else
+                return Fraction(solver).mul(Fraction(a[i][j])).sub(Fraction(a[si][j]).mul(Fraction(a[i][sj]))).div(Fraction(solver));
+        }
+        else if (mode  == "b") {
+
+            if( i == si )
+                return Fraction(a[i].b).div(Fraction(solver));
+            else
+                return Fraction(solver).mul(Fraction(a[i].b)).sub(Fraction(a[si].b).mul(Fraction(a[i][sj]))).div(Fraction(solver));
+        }
+    }
+
     /**
      *
      * @returns {Object} answer- represent result
@@ -339,7 +442,8 @@ function Simplex() {
      */
     this.get = function () {
 
-        if(!isResult) calc();
+        if(!isResult && isFractinMode) calcAsFraction();
+        else if(!isResult && !isFractinMode) calc();
         return answer;
     };
 
