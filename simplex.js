@@ -1,13 +1,16 @@
 function Simplex() {
 
-    var A = [],      /* array of conditions coefficients */
-        f = [],      /* array of target function coefficients */
+    var A = [],      // array of conditions coefficients
+        f = [],      // array of target function coefficients
         M = 1000000, // "very big number" for method of artificial basis
         realNumVariables,
         isResult,
         isFractinMode,
         answer={};
     //todo varchar, fchar
+
+    var steps = [];
+    this.steps  =steps;
 
     /**
      * Set Simplex class params
@@ -256,7 +259,7 @@ function Simplex() {
             }
 
             solver = (f.mode == "max") ? Math.min.apply(null, delta)
-                                       : Math.max.apply(null, delta);
+                : Math.max.apply(null, delta);
 
             if     (f.mode == "max" && solver >= 0 ) break;
             else if(f.mode == "min" && solver <= 0 ) break;
@@ -273,6 +276,9 @@ function Simplex() {
             si = theta.indexOf(Math.min.apply(null, theta));
 
             solver = A[si][sj];
+
+            steps.push( addStep(basis, result, delta, theta, solver) );
+
             var prev = copyA();
 
             for(i = 0; i<m; i++) {
@@ -289,6 +295,9 @@ function Simplex() {
             result = 0;
             theta.length = 0;
         }
+
+        steps.push( addStep(basis, result, delta, theta, solver) );
+
         var X= new Array(realNumVariables);
         for(i = 0; i< realNumVariables; i++) {
 
@@ -346,6 +355,9 @@ function Simplex() {
             si = indexOfFraction(theta,Math.min.apply(null, theta));
 
             solver = new Fraction(A[si][sj]);
+
+            steps.push( addStep(basis, result, delta, theta, solver) );
+
             var prev = copyA();
 
             for(i = 0; i<m; i++) {
@@ -363,6 +375,8 @@ function Simplex() {
             theta.length = 0;
         }
 
+        steps.push( addStep(basis, result, delta, theta, solver) );
+
         var X = new Array(realNumVariables);
         for(i = 0; i< realNumVariables; i++) {
 
@@ -373,6 +387,20 @@ function Simplex() {
         }
         isResult = true;
         answer = {result:result, x:X};
+    }
+
+    function addStep( basis, result, delta, theta, solver ) {
+
+        var newStep = {};
+
+        newStep.a = copyA();
+        newStep.basis = basis.slice(0);
+        newStep.result = result;
+        newStep.delta = delta.slice(0);
+        newStep.theta = theta.slice(0);
+        newStep.solver = solver;
+
+        return newStep;
     }
 
     function indexOfFraction(arr, item) {
