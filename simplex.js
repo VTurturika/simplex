@@ -8,6 +8,28 @@ function Simplex() {
         answer={};
     //todo varchar, fchar
 
+    /**
+     * Set Simplex class params
+     * @param {Object} input - object with parameters
+     * @param.option {Array}  input.f - coefficients of target function
+     * @param.option {String} input.mode - mode of problem (max/min)
+     * @param.option {String} input.func - target function as string
+     *                !!! use only func or only f + mode params
+     *
+     * @param.option {Object} input.c - setting SINGLE condition
+     *  @param.option {String} input.c.sign - current condition sign (<= | = | >=)
+     *  @param.option {Array}  input.c.a - coefficients next to x in current row of matrix
+     *  @param.option {Number} input.c.b - current condition "free member";
+     *  @param.option {String} input.c.str - set condition as string
+     *                  !!! use only c.str or only c.a + c.b + c.sign params
+     *
+     * @param.option {Object} input.conditions - setting MULTIPLE conditions
+     *  @param.option {Object} input.conditions.cI - specify concrete condition (I = 0,1,2 ..condition_count-1)
+     *      @param.option {String} input.conditions.cI.sign - watch input.c.sign
+     *      @param.option {Array} input.conditions.cI.a - watch input.c.a
+     *      @param.option {Number} input.conditions.cI.b - watch input.c.b
+     *      @param.option {String} input.conditions.cI.str - watch input.c.str
+     */
     this.set = function (input) {
 
         var i;
@@ -305,6 +327,12 @@ function Simplex() {
         }
     }
 
+    /**
+     *
+     * @returns {Object} answer- represent result
+     * @returns.option  {Number} answer.result - optimal value of target functions
+     * @returns.option  {Array}  answer.x - vector of optimal variable values x;
+     */
     this.get = function () {
 
         if(!isResult) calc();
