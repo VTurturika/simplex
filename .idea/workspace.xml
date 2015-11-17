@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5476aa1e-c728-42c8-84fb-57443c457d6d" name="Default" comment="Added fraction support ( using calcAsFraction, indexOfFraction, nexPlan">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fraction.js" />
+    <list default="true" id="5476aa1e-c728-42c8-84fb-57443c457d6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simplex.js" afterPath="$PROJECT_DIR$/simplex.js" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1923077">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -40,12 +39,12 @@
       <file leaf-file-name="simplex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simplex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3390411">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.43664384">
+              <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
               <folding>
-                <element signature="e#337#1772#0" expanded="false" />
-                <element signature="e#1909#2216#0" expanded="false" />
-                <element signature="e#2324#2378#0" expanded="false" />
+                <element signature="e#376#1811#0" expanded="false" />
+                <element signature="e#1844#3280#0" expanded="false" />
+                <element signature="e#2363#2417#0" expanded="false" />
                 <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -53,8 +52,8 @@
                 <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+                <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
               </folding>
@@ -314,7 +313,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447775070964</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added fraction support ( using calcAsFraction, indexOfFraction, nexPlanAsFraction methods)">
+      <created>1447781813967</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1447781813967</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -374,7 +379,8 @@
     <MESSAGE value="Alpha Release&#10;Added calc(), nextPlan(), copyA() methods" />
     <MESSAGE value="Added get and set methods jsdoc description" />
     <MESSAGE value="Added branch Fractions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added branch Fractions" />
+    <MESSAGE value="Added fraction support ( using calcAsFraction, indexOfFraction, nexPlanAsFraction methods)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fraction support ( using calcAsFraction, indexOfFraction, nexPlanAsFraction methods)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -399,9 +405,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -409,8 +415,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -430,9 +436,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -440,8 +446,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -461,9 +467,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -471,8 +477,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -492,9 +498,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -502,8 +508,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -523,9 +529,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -533,8 +539,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -554,9 +560,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -564,8 +570,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -585,9 +591,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -595,8 +601,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -616,9 +622,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -626,8 +632,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -647,9 +653,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -657,8 +663,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -678,9 +684,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -688,8 +694,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -709,9 +715,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -719,8 +725,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -748,9 +754,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -758,8 +764,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -779,9 +785,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -789,8 +795,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -810,9 +816,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -820,8 +826,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
@@ -847,20 +853,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1923077">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simplex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3390411">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43664384">
+          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
           <folding>
-            <element signature="e#337#1772#0" expanded="false" />
-            <element signature="e#1909#2216#0" expanded="false" />
-            <element signature="e#2324#2378#0" expanded="false" />
+            <element signature="e#376#1811#0" expanded="false" />
+            <element signature="e#1844#3280#0" expanded="false" />
+            <element signature="e#2363#2417#0" expanded="false" />
             <element signature="n#!!block;n#checkSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
@@ -868,8 +874,8 @@
             <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
+            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
           </folding>
