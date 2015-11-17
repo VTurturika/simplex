@@ -5,8 +5,7 @@ function Simplex() {
         M = 1000000, // "very big number" for method of artificial basis
         realNumVariables,
         isResult,
-        isFractinMode,
-        answer={};
+        isFractinMode;
     //todo varchar, fchar
 
     var steps = [];
@@ -298,16 +297,7 @@ function Simplex() {
 
         steps.push( addStep(basis, result, delta, theta, solver) );
 
-        var X= new Array(realNumVariables);
-        for(i = 0; i< realNumVariables; i++) {
-
-            if( (pos=basis.indexOf(i)) != -1)
-                X[i]=A[pos].b;
-            else
-                X[i] = 0;
-        }
         isResult = true;
-        answer = {result:result, x:X};
     }
 
     function calcAsFraction() {
@@ -377,16 +367,7 @@ function Simplex() {
 
         steps.push( addStep(basis, result, delta, theta, solver) );
 
-        var X = new Array(realNumVariables);
-        for(i = 0; i< realNumVariables; i++) {
-
-            if( (pos=basis.indexOf(i)) != -1)
-                X[i]=A[pos].b;
-            else
-                X[i] = 0;
-        }
         isResult = true;
-        answer = {result:result, x:X};
     }
 
     function addStep( basis, result, delta, theta, solver ) {
@@ -462,6 +443,20 @@ function Simplex() {
         }
     }
 
+    function getOptimalPlan() {
+
+        var pos;
+        var X= new Array(realNumVariables);
+        for(var i = 0; i< realNumVariables; i++) {
+
+            if( (pos=steps[steps.length-1].basis.indexOf(i)) != -1)
+                X[i]=steps[steps.length-1].a[pos].b;
+            else
+                X[i] = 0;
+        }
+        return X;
+    }
+
     /**
      *
      * @returns {Object} answer- represent result
@@ -472,7 +467,7 @@ function Simplex() {
 
         if(!isResult && isFractinMode) calcAsFraction();
         else if(!isResult && !isFractinMode) calc();
-        return answer;
+        return {result : steps[steps.length-1].result, X : getOptimalPlan() };
     };
 
 }
