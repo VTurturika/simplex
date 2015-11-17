@@ -297,6 +297,10 @@ function Simplex() {
         answer = {result:result, x:X};
     }
 
+    function calcAsFraction() {
+
+    }
+
     function copyA() {
         var result = [];
         for(var i = 0; i< A.length; i++) {
