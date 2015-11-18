@@ -9,7 +9,6 @@ function Simplex() {
     //todo varchar, fchar
 
     var steps = [];
-    this.steps  =steps;
 
     /**
      * Set Simplex class params
@@ -38,20 +37,25 @@ function Simplex() {
 
         var i;
 
-        isFractinMode = input.fraction || false;
+        if(isFractinMode == undefined )isFractinMode = input.fraction || false;
 
         if (input.f && input.mode) { //target function
 
             f.length = 0;
-            f.mode = /(min)|(max)/.exec(input.mode.toLowerCase());
+            var mode = /(min)|(max)/.exec(input.mode.toLowerCase());
 
-            //todo parsing input.f / input.mode
+            if(!mode) throw new Error("Wrong mode of target function");
+
             for (i = 0; i < input.f.length; i++) {
 
-                f[i] = input.f[i];
+                f[i] = numberParser(input.f[i]);
+                if(f[i] === false) {
+                    f.length=0;
+                    throw new TypeError("Invalid input number!");
+                }
             }
 
-            f.mode = input.mode;
+            f.mode = mode[0];
         }
         else if (input.func) {
             //todo parsing input.func;
@@ -103,7 +107,7 @@ function Simplex() {
         }
 
         else {
-            throw new Error("error");
+            throw new Error("Invalid sign");
         }
 
     }
@@ -129,11 +133,21 @@ function Simplex() {
         }
 
         A[row].sign = currentSign;
-        A[row].b = b;
+        A[row].b = numberParser(b);
+
+        if( A[row].b === false ) {
+            delete A[row].sign;
+            delete A[row].b;
+            throw new TypeError("Invalid input number!");
+        }
 
         for (var i = 0; i < a.length; i++) {
 
-            A[row][i] = a[i];
+            A[row][i] = numberParser(a[i]);
+            if( A[row][i] === false ) {
+                delete A[row];
+                throw new TypeError("Invalid input number!");
+            }
         }
     }
 
@@ -377,9 +391,24 @@ function Simplex() {
         newStep.a = copyA();
         newStep.basis = basis.slice(0);
         newStep.result = result;
-        newStep.delta = delta.slice(0);
         newStep.theta = theta.slice(0);
         newStep.solver = solver;
+
+        if( !delta.every(function(item,i,arr){
+
+           if( arr[i] >= M) return false;
+           else return true;
+        }))
+
+        delta.forEach(function(item,i,arr){
+
+            arr[i] = (arr[i] / M).toFixed(2);
+
+        });
+
+
+        newStep.delta = delta.slice(0);
+
 
         return newStep;
     }
@@ -443,31 +472,71 @@ function Simplex() {
         }
     }
 
-    function getOptimalPlan() {
+    function getOptimalPlan( num ) {
 
-        var pos;
+        var pos,
+            n = num || steps.length-1;
         var X= new Array(realNumVariables);
         for(var i = 0; i< realNumVariables; i++) {
 
-            if( (pos=steps[steps.length-1].basis.indexOf(i)) != -1)
-                X[i]=steps[steps.length-1].a[pos].b;
+            if( (pos=steps[n].basis.indexOf(i)) != -1)
+                X[i]=steps[n].a[pos].b;
             else
                 X[i] = 0;
         }
         return X;
     }
 
+    function numberParser(x) {
+
+        if( !isNaN(x=parseFloat(x)) ) return x;
+        else return false;
+    }
+
     /**
-     *
-     * @returns {Object} answer- represent result
-     * @returns.option  {Number} answer.result - optimal value of target functions
-     * @returns.option  {Array}  answer.x - vector of optimal variable values x;
+     * get results of calculations
+     * @returns {Object} answer - represent result
+     * @returns {Number}|{Fraction} result - optimal value of target function
+     * @returns.option  {Array} answer.steps - simplex tables step-by-step
+     * @returns.option {Object} answer.step - single step simplex table
+     * @returns.option {Array} answer.X - values of variables in current step
      */
-    this.get = function () {
+    this.get = function (input) {
 
         if(!isResult && isFractinMode) calcAsFraction();
         else if(!isResult && !isFractinMode) calc();
-        return {result : steps[steps.length-1].result, X : getOptimalPlan() };
-    };
+
+        var answer = {};
+
+        if( !input ) {
+
+            return steps[steps.length-1].result
+        }
+        if( input.steps ) {
+
+            answer.steps = steps;
+        }
+        if( input.X != undefined ) {
+
+            answer["X" + input.X] = getOptimalPlan(input.X);
+        }
+        if (input.step != undefined) {
+
+            answer["step" + input.step] = steps[input.step];
+            answer.f = f;
+        }
+
+            answer.result = steps[steps.length-1].result;
+            return answer;
+        };
+    this.reset = function() {
+        A.length=0;
+        f.length=0;
+        delete f.mode;
+        realNumVariables=0;
+        isResult=false;
+        steps.length=0;
+    }
+
 
 }
