@@ -290,7 +290,7 @@ function Simplex() {
 
             solver = A[si][sj];
 
-            steps.push( addStep(basis, result, delta, theta, solver) );
+            steps.push( addStep(basis, result, delta, theta, solver, si, sj) );
 
             var prev = copyA();
 
@@ -360,7 +360,7 @@ function Simplex() {
 
             solver = new Fraction(A[si][sj]);
 
-            steps.push( addStep(basis, result, delta, theta, solver) );
+            steps.push( addStep(basis, result, delta, theta, solver, si, sj) );
 
             var prev = copyA();
 
@@ -384,7 +384,7 @@ function Simplex() {
         isResult = true;
     }
 
-    function addStep( basis, result, delta, theta, solver ) {
+    function addStep( basis, result, delta, theta, solver, si, sj ) {
 
         var newStep = {};
 
@@ -393,6 +393,8 @@ function Simplex() {
         newStep.result = result;
         newStep.theta = theta.slice(0);
         newStep.solver = solver;
+        newStep.si=si;
+        newStep.sj=sj;
 
         if( !delta.every(function(item,i,arr){
 
