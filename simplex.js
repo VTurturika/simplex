@@ -518,12 +518,9 @@ function Simplex() {
         if ( numberParser(param) !== false && 0 <= param && param <answer.numSteps  ) {
             answer.step = steps[param];
         }
-        else {
-            return false;
-        }
 
-            return answer;
-        };
+        return answer;
+    };
 
     this.reset = function() {
         A.length=0;
