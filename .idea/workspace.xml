@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5476aa1e-c728-42c8-84fb-57443c457d6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simplex.js" afterPath="$PROJECT_DIR$/simplex.js" />
     </list>
     <ignored path="simplex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +42,8 @@
       <file leaf-file-name="simplex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simplex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8544521">
-              <caret line="521" column="22" selection-start-line="521" selection-start-column="22" selection-end-line="521" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.67979455">
+              <caret line="515" column="0" selection-start-line="515" selection-start-column="0" selection-end-line="515" selection-end-column="0" />
               <folding>
                 <element signature="e#333#1768#0" expanded="false" />
                 <element signature="e#1801#3459#0" expanded="false" />
@@ -383,7 +382,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448981210553</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed rewritten method get">
+      <created>1448981972670</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1448981972670</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -451,7 +456,8 @@
     <MESSAGE value="Added realNumVariables properties to result of get method" />
     <MESSAGE value="Removed getOptimalPlan method, added property X to step object" />
     <MESSAGE value="Rewritten get method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewritten get method" />
+    <MESSAGE value="Fixed rewritten method get" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed rewritten method get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1298,8 +1304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simplex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8544521">
-          <caret line="521" column="22" selection-start-line="521" selection-start-column="22" selection-end-line="521" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.67979455">
+          <caret line="515" column="0" selection-start-line="515" selection-start-column="0" selection-end-line="515" selection-end-column="0" />
           <folding>
             <element signature="e#333#1768#0" expanded="false" />
             <element signature="e#1801#3459#0" expanded="false" />
