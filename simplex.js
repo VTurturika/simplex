@@ -403,6 +403,15 @@ function Simplex() {
         newStep.solver = solver;
         newStep.si=si;
         newStep.sj=sj;
+        var pos;
+        newStep.X = new Array(realNumVariables);
+        for(i = 0; i< realNumVariables; i++) {
+
+            if( (pos=basis.indexOf(i)) != -1)
+                newStep.X[i]=newStep.a[pos].b;
+            else
+                newStep.X[i] = 0;
+        }
 
         if( !delta.every(function(item,i,arr){
 
@@ -416,9 +425,7 @@ function Simplex() {
 
         });
 
-
         newStep.delta = delta.slice(0);
-
 
         return newStep;
     }
@@ -482,21 +489,6 @@ function Simplex() {
         }
     }
 
-    function getOptimalPlan( num ) {
-
-        var pos,
-            n = num || steps.length-1;
-        var X= new Array(realNumVariables);
-        for(var i = 0; i< realNumVariables; i++) {
-
-            if( (pos=steps[n].basis.indexOf(i)) != -1)
-                X[i]=steps[n].a[pos].b;
-            else
-                X[i] = 0;
-        }
-        return X;
-    }
-
     function numberParser(x) {
 
         if( !isNaN(x=parseFloat(x)) ) return x;
@@ -523,7 +515,7 @@ function Simplex() {
         answer.numSteps = steps.length;
         answer.realNumVariables = realNumVariables;
         answer.result = steps[answer.numSteps - 1].result;
-        answer.resultX = getOptimalPlan(answer.numSteps-1);
+        answer.resultX = steps[answer.numSteps - 1].X;
         answer.f = f;
 
         if( !input ) {
@@ -536,7 +528,7 @@ function Simplex() {
         }
         if( input.X != undefined ) {
 
-            answer.X = getOptimalPlan(input.X);
+            answer.X = steps[input.X].X;
         }
         if (input.step != undefined) {
             answer.step = steps[input.step];
@@ -544,6 +536,7 @@ function Simplex() {
 
             return answer;
         };
+
     this.reset = function() {
         A.length=0;
         f.length=0;
@@ -552,6 +545,5 @@ function Simplex() {
         isResult=false;
         steps.length=0;
     }
-
 
 }
