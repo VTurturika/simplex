@@ -9,7 +9,7 @@
 
     var s = new Simplex();
 
-        s.set({
+    /*    s.set({
             f: [8,10,0,-5],
             mode: "max",
             fraction : true,
@@ -23,13 +23,32 @@
                     sign: "<=",
                     a : [3,2,1,2],
                     b: 380
-                },
-                c2 : {
-                    sign : ">=",
-                    a : [0,0,1,0],
-                    b : 9
                 }
-            }});
+        }});*/
+
+    s.set({
+        f: [1,1,1],
+        mode: "max",
+        fraction: true,
+        conditions: {
+            c0:{
+                sign: "<=",
+                b: 1,
+                a: [7,0,-5]
+            },
+            c1:{
+                sign: "<=",
+                b: 1,
+                a: [0,1,4]
+            },
+            c2:{
+                sign: "<=",
+                b: 1,
+                a: [-5,3,6]
+            }
+        }
+    });
+    debugger;
     console.log(s.get({X: 0}));
 
 

@@ -272,20 +272,22 @@ function Simplex() {
             }
 
             solver = (f.mode == "max") ? Math.min.apply(null, delta)
-                : Math.max.apply(null, delta);
+                                       : Math.max.apply(null, delta);
 
             if     (f.mode == "max" && solver >= 0 ) break;
             else if(f.mode == "min" && solver <= 0 ) break;
 
             sj = delta.indexOf(solver);
 
-            theta.forEach(function(item,i,arr){arr[i] = Infinity;});
             for(i=0; i<m; i++) {
+
                 if(A[i][sj] > 0) {
                     theta[i] = A[i].b / A[i][sj];
                 }
+                else {
+                    theta[i]=M;
+                }
             }
-
             si = theta.indexOf(Math.min.apply(null, theta));
 
             solver = A[si][sj];
@@ -349,14 +351,16 @@ function Simplex() {
 
             sj=indexOfFraction(delta,solver);
 
-            theta.forEach(function(item,i,arr){arr[i] = Infinity;});
             for(i=0; i<m; i++) {
+
                 if(A[i][sj] > 0) {
-                    theta[i] = Fraction(A[i].b).div(Fraction(A[i][sj]));
+                    theta[i] = A[i].b / A[i][sj];
+                }
+                else {
+                    theta[i]=M;
                 }
             }
-
-            si = indexOfFraction(theta,Math.min.apply(null, theta));
+            si = indexOfFraction(theta,Fraction(Math.min.apply(null, theta)));
 
             solver = new Fraction(A[si][sj]);
 
@@ -391,7 +395,11 @@ function Simplex() {
         newStep.a = copyA();
         newStep.basis = basis.slice(0);
         newStep.result = result;
-        newStep.theta = theta.slice(0);
+        newStep.theta =  [];
+        for(var i=0;i < theta.length; i++){
+            if(theta[i] != M) newStep.theta.push(theta[i]);
+            else newStep.theta.push(undefined);
+        }
         newStep.solver = solver;
         newStep.si=si;
         newStep.sj=sj;
@@ -510,9 +518,14 @@ function Simplex() {
 
         var answer = {};
 
+        answer.numSteps = steps.length;
+        answer.result = steps[answer.numSteps - 1].result;
+        answer.resultX = getOptimalPlan(answer.numSteps-1);
+        answer.f = f;
+
         if( !input ) {
 
-            return steps[steps.length-1].result
+            return answer;
         }
         if( input.steps ) {
 
@@ -520,15 +533,12 @@ function Simplex() {
         }
         if( input.X != undefined ) {
 
-            answer["X" + input.X] = getOptimalPlan(input.X);
+            answer.X = getOptimalPlan(input.X);
         }
         if (input.step != undefined) {
-
-            answer["step" + input.step] = steps[input.step];
-            answer.f = f;
+            answer.step = steps[input.step];
         }
 
-            answer.result = steps[steps.length-1].result;
             return answer;
         };
     this.reset = function() {
