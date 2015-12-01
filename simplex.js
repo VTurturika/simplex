@@ -521,6 +521,7 @@ function Simplex() {
         answer.numVars = f.length;
         answer.numConds = A.length;
         answer.numSteps = steps.length;
+        answer.realNumVariables = realNumVariables;
         answer.result = steps[answer.numSteps - 1].result;
         answer.resultX = getOptimalPlan(answer.numSteps-1);
         answer.f = f;
