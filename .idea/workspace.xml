@@ -4,8 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/index.html" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5476aa1e-c728-42c8-84fb-57443c457d6d" name="Default" comment="Removed getOp">
+    <list default="true" id="5476aa1e-c728-42c8-84fb-57443c457d6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simplex.js" afterPath="$PROJECT_DIR$/simplex.js" />
     </list>
     <ignored path="simplex.iws" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.307693">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state vertical-scroll-proportion="-13.615385">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#228#636#0" expanded="false" />
               </folding>
@@ -43,8 +44,8 @@
       <file leaf-file-name="simplex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simplex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3938356">
-              <caret line="491" column="0" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38869864">
+              <caret line="510" column="9" selection-start-line="510" selection-start-column="9" selection-end-line="510" selection-end-column="9" />
               <folding>
                 <element signature="e#333#1768#0" expanded="false" />
                 <element signature="e#1801#3459#0" expanded="false" />
@@ -60,9 +61,7 @@
                 <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="e#14285#14685#0" expanded="false" />
-                <element signature="e#15543#15689#0" expanded="false" />
+                <element signature="e#15089#15235#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -72,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/fraction.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="306" column="8" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
+              <caret line="318" column="27" selection-start-line="318" selection-start-column="27" selection-end-line="318" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -373,7 +372,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448975964171</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Removed getOptimalPlan method, added property X to step object">
+      <created>1448980137577</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1448980137577</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -440,7 +445,8 @@
     <MESSAGE value="Rewritten get method" />
     <MESSAGE value="Added numVars and numConds properties to result of get method" />
     <MESSAGE value="Added realNumVariables properties to result of get method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added realNumVariables properties to result of get method" />
+    <MESSAGE value="Removed getOptimalPlan method, added property X to step object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed getOptimalPlan method, added property X to step object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -508,9 +514,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -552,9 +556,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -596,9 +598,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,9 +632,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -668,9 +666,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,9 +700,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -740,9 +734,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -776,9 +768,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -812,9 +802,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -848,9 +836,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -884,9 +870,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,9 +904,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -956,9 +938,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -992,9 +972,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1028,9 +1006,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1064,9 +1040,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1100,9 +1074,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1136,9 +1108,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1172,9 +1142,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1218,9 +1186,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1254,9 +1220,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1290,9 +1254,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1314,15 +1276,15 @@
     <entry file="file://$PROJECT_DIR$/fraction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="306" column="8" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
+          <caret line="318" column="27" selection-start-line="318" selection-start-column="27" selection-end-line="318" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.307693">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state vertical-scroll-proportion="-13.615385">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="e#228#636#0" expanded="false" />
           </folding>
@@ -1331,8 +1293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simplex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3938356">
-          <caret line="491" column="0" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38869864">
+          <caret line="510" column="9" selection-start-line="510" selection-start-column="9" selection-end-line="510" selection-end-column="9" />
           <folding>
             <element signature="e#333#1768#0" expanded="false" />
             <element signature="e#1801#3459#0" expanded="false" />
@@ -1348,9 +1310,7 @@
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#14285#14685#0" expanded="false" />
-            <element signature="e#15543#15689#0" expanded="false" />
+            <element signature="e#15089#15235#0" expanded="false" />
           </folding>
         </state>
       </provider>

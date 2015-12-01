@@ -495,15 +495,7 @@ function Simplex() {
         else return false;
     }
 
-    /**
-     * get results of calculations
-     * @returns {Object} answer - represent result
-     * @returns {Number}|{Fraction} result - optimal value of target function
-     * @returns.option  {Array} answer.steps - simplex tables step-by-step
-     * @returns.option {Object} answer.step - single step simplex table
-     * @returns.option {Array} answer.X - values of variables in current step
-     */
-    this.get = function (input) {
+    this.get = function (param) {
 
         if(!isResult && isFractinMode) calcAsFraction();
         else if(!isResult && !isFractinMode) calc();
@@ -518,20 +510,16 @@ function Simplex() {
         answer.resultX = steps[answer.numSteps - 1].X;
         answer.f = f;
 
-        if( !input ) {
-
-            return answer;
-        }
-        if( input.steps ) {
+        if( param == "steps" ) {
 
             answer.steps = steps;
         }
-        if( input.X != undefined ) {
 
-            answer.X = steps[input.X].X;
+        if ( numberParser(param) !== false && 0 <= param && param <answer.numSteps  ) {
+            answer.step = steps[param];
         }
-        if (input.step != undefined) {
-            answer.step = steps[input.step];
+        else {
+            return false;
         }
 
             return answer;
