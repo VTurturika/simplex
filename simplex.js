@@ -48,7 +48,13 @@ function Simplex() {
 
             for (i = 0; i < input.f.length; i++) {
 
-                f[i] = numberParser(input.f[i]);
+                if(input.f[i] instanceof Fraction) {
+                    f[i] = fractionParser(input.f[i]);
+                }
+                else {
+                    f[i] = numberParser(input.f[i]);
+                }
+
                 if(f[i] === false) {
                     f.length=0;
                     throw new TypeError("Invalid input number!");
@@ -497,6 +503,15 @@ function Simplex() {
         if( !isNaN(x=parseFloat(x)) ) return x;
         else return false;
     }
+
+    function fractionParser(x) {
+
+        if(numberParser(x.n) && numberParser(x.d)) {
+            return x;
+        }
+        else return false;
+    }
+
 
     this.get = function (param) {
 
