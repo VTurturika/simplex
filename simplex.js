@@ -98,6 +98,7 @@ function Simplex() {
             }
         }
         isResult = false;
+        steps = [];
     };
 
     function checkSign(s) {
@@ -212,6 +213,7 @@ function Simplex() {
         for(i = 0; i<m; i++) {
 
             pos=0;
+            hasBasisVar = false;
             // finding basis variable
             while( (pos=A[i].indexOf(1,pos)) != -1 ) {
 
