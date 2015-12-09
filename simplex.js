@@ -216,7 +216,7 @@ function Simplex() {
             pos=0;
             hasBasisVar = false;
             // finding basis variable
-            while( (pos=A[i].indexOf(1,pos)) != -1 ) {
+            while( (pos= (isFractinMode) ? indexOfFraction(A[i],1,pos) : A[i].indexOf(1,pos)) != -1 ) {
 
                 hasBasisVar = false;
                 //checking variable to basis
@@ -434,8 +434,9 @@ function Simplex() {
         return newStep;
     }
 
-    function indexOfFraction(arr, item) {
-        for(var i = 0; i<arr.length; i++) {
+    function indexOfFraction(arr, item, pos) {
+        pos = pos || 0;
+        for(var i = pos; i<arr.length; i++) {
             if(Fraction(item).compare(Fraction(arr[i])) == 0) {
                 return i
             }

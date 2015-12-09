@@ -28,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#228#636#0" expanded="false" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simplex.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="simplex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simplex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59246576">
-              <caret line="529" column="57" selection-start-line="529" selection-start-column="57" selection-end-line="529" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="530" column="57" selection-start-line="530" selection-start-column="57" selection-end-line="530" selection-end-column="57" />
               <folding>
                 <element signature="e#333#1768#0" expanded="false" />
                 <element signature="e#1801#3570#0" expanded="false" />
@@ -52,17 +52,16 @@
                 <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
                 <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-                <element signature="e#15526#15672#0" expanded="false" />
+                <element signature="e#15606#15752#0" expanded="false" />
+                <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+                <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+                <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -411,7 +410,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449698996693</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added getting lastStep in get() method">
+      <created>1449700405038</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1449700405038</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -486,34 +491,35 @@
     <MESSAGE value="Fixed firstBasis() method, disabling steps array in set() method" />
     <MESSAGE value="Added support of set target function coefficients as fractions" />
     <MESSAGE value="Added support of set conditions coefficients as fraction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support of set conditions coefficients as fraction" />
+    <MESSAGE value="Added getting lastStep in get() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getting lastStep in get() method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/simplex.js</url>
-          <line>260</line>
+          <line>257</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/simplex.js</url>
-          <line>348</line>
+          <line>345</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/simplex.js</url>
-          <line>366</line>
+          <line>363</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/simplex.js</url>
-          <line>384</line>
+          <line>381</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/simplex.js</url>
-          <line>398</line>
+          <line>395</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
@@ -541,17 +547,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -585,17 +590,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -629,17 +633,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -665,17 +668,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -701,17 +703,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -737,17 +738,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -773,17 +773,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -809,17 +808,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -845,17 +843,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -881,17 +878,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -917,17 +913,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -953,17 +948,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -989,17 +983,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1025,17 +1018,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1061,17 +1053,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1097,17 +1088,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1133,17 +1123,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1169,17 +1158,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1205,17 +1193,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1251,17 +1238,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1287,17 +1273,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1323,17 +1308,16 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1353,20 +1337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#228#636#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simplex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59246576">
-          <caret line="529" column="57" selection-start-line="529" selection-start-column="57" selection-end-line="529" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="530" column="57" selection-start-line="530" selection-start-column="57" selection-end-line="530" selection-end-column="57" />
           <folding>
             <element signature="e#333#1768#0" expanded="false" />
             <element signature="e#1801#3570#0" expanded="false" />
@@ -1374,17 +1348,26 @@
             <element signature="n#!!block;n#reverseSign#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#parseCondition#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#normalize#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#firstBasis#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calc#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#calcAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="n#!!block;n#addStep#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#indexOfFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#copyA#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlan#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#nextPlanAsFraction#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#numberParser#0;n#!!block;n#Simplex#0" expanded="false" />
             <element signature="n#!!block;n#fractionParser#0;n#!!block;n#Simplex#0" expanded="false" />
-            <element signature="e#15526#15672#0" expanded="false" />
+            <element signature="e#15606#15752#0" expanded="false" />
+            <marker date="1449702463753" expanded="false" signature="6576:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="6729:6846" placeholder="{...}" />
+            <marker date="1449702463753" expanded="true" signature="12876:12990" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#228#636#0" expanded="false" />
           </folding>
         </state>
       </provider>
