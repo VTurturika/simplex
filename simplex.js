@@ -48,12 +48,7 @@ function Simplex() {
 
             for (i = 0; i < input.f.length; i++) {
 
-                if(input.f[i] instanceof Fraction) {
-                    f[i] = fractionParser(input.f[i]);
-                }
-                else {
-                    f[i] = numberParser(input.f[i]);
-                }
+                f[i] = (input.f[i] instanceof Fraction) ? fractionParser(input.f[i]) : numberParser(input.f[i]);
 
                 if(f[i] === false) {
                     f.length=0;
@@ -141,7 +136,7 @@ function Simplex() {
         }
 
         A[row].sign = currentSign;
-        A[row].b = numberParser(b);
+        A[row].b = (b instanceof Fraction) ? fractionParser(b) : numberParser(b);
 
         if( A[row].b === false ) {
             delete A[row].sign;
@@ -151,7 +146,7 @@ function Simplex() {
 
         for (var i = 0; i < a.length; i++) {
 
-            A[row][i] = numberParser(a[i]);
+            A[row][i] = (a[i] instanceof Fraction)? fractionParser(a[i]) : numberParser(a[i]);
             if( A[row][i] === false ) {
                 delete A[row];
                 throw new TypeError("Invalid input number!");
