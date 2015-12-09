@@ -97,6 +97,7 @@ function Simplex() {
                 condCount++;
             }
         }
+        isResult = false;
     };
 
     function checkSign(s) {
@@ -511,7 +512,6 @@ function Simplex() {
         answer.f = f;
 
         if( param == "steps" ) {
-
             answer.steps = steps;
         }
 
