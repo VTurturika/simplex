@@ -507,7 +507,6 @@ function Simplex() {
         else return false;
     }
 
-
     this.get = function (param) {
 
         if(!isResult && isFractinMode) calcAsFraction();
@@ -525,6 +524,10 @@ function Simplex() {
 
         if( param == "steps" ) {
             answer.steps = steps;
+        }
+
+        if( param = "lastStep") {
+            answer.lastStep = steps[answer.numSteps - 1];
         }
 
         if ( numberParser(param) !== false && 0 <= param && param <answer.numSteps  ) {
